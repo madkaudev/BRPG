@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en-US">
     <head>
-        <!-- Set the favicon image and title -->
+        <!-- Set the title and favicon image  -->
         <title>BRPG</title>
-        <link rel="icon" href="Images/Logos/PNGs/BRPG_Logo_2.png" type="image/x-icon"/>
+        <link rel="icon" href="images/logos/pngs/brpg_logo_2.png" type="image/x-icon"/>
         <!-- Author and description -->
         <meta name="author" content="Mad Kau"/>
         <meta name="description" content="The Browser Role Playing Game. Lead your squad of heroes to defeat the evil Lord Natu Plantu!"/>
@@ -11,19 +11,28 @@
         <meta property="og:title" content="BRPG"/>
         <meta property="og:type" content="website"/>
         <meta property="og:url" content="https://www.BRPG.farawaygiant.com"/> <!-- Doesn't exist yet -->
-        <meta property="og:image" content="Images/Logos/PNGs/BRPG_Logo_2.png"/>
+        <meta property="og:image" content="images/logos/pngs/brpg_logo_2.png"/>
+        <!-- Twitter/X cards -->
+        <meta name="twitter:card" content="summary"/>
+        <meta name="twitter:site" content="@farawaygiant"/>
+        <meta name="twitter:title" content="BRPG"/>
+        <meta name="twitter:description" content="The Browser Role Playing Game. Lead your squad of heroes to defeat the evil Lord Natu Plantu!"/>
+        <meta name="twitter:image" content="images/logos/pngs/brpg_logo_2.png"/>
         <!-- Character set and viewport -->
         <meta charset="utf-8"/>
-        <meta name="viewport" content="width=device-width"/>
-        <!-- Load styles and scripts -->
-        <link rel="stylesheet" href="Styles/canvas.css"/> 
-        <script src="Scripts/canvas.js" defer></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <!-- Load styles -->
+        <link rel="stylesheet" href="stylesheets/canvas.css"/>
+        <link rel="stylesheet" href="stylesheets/style.css"/> 
+        <!-- Load scripts -->
+        <script src="scripts/canvas.js" defer></script>
+        <script src="scripts/battle.js" defer></script>
         
     </head>
     <body>
         <header></header>
         <main>
-            <canvas id="battle-scene" width="300" height="150">
+            <canvas id="battle-scene" height="1280" width="720">
                 Crazy battling going on right now!
             </canvas>
         </main>
