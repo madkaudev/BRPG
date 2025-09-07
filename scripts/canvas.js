@@ -7,5 +7,3 @@ const Height = screen.height * 2 / 3;
 // Set new width and height of canvas.
 Canvas.width = Width;
 Canvas.height = Height;
-
-
