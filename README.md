@@ -3,4 +3,6 @@ The Browser Role Playing Game. Lead your squad of heroes to defeat the evil Lord
 <br>
 <br>
 Version 0.0.0 (Current Version)
-- Created sprite placements for battle
+- On launch, character sprites are drawn
+- No interactivity
+- Working on battler right now
