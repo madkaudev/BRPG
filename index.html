@@ -23,17 +23,31 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <!-- Load styles -->
         <link rel="stylesheet" href="stylesheets/canvas.css"/>
-        <link rel="stylesheet" href="stylesheets/style.css"/> 
+        <link rel="stylesheet" href="stylesheets/layout.css"/> 
         <!-- Load scripts -->
-        <script src="scripts/canvas.js" defer></script>
-        <script src="scripts/battleScene.js" defer></script>
+        <script type="module" src="scripts/battleScene.js" defer></script>
+        <script type="module" src="scripts/battleMenuInputs.js" defer></script>
+        <script src="scripts/layout.js" defer></script>
     </head>
     <body>
-        <header></header>
+        <header>
+            <!-- Coordinates of mouse -->
+            <h3 id="header-h3">Current Pixel: (0,0)</h3>
+        </header>
         <main>
             <canvas id="battle-scene" height="1280" width="720">
                 Crazy battling going on right now!
             </canvas>
+            <menu id="battle-menu">
+                <input type="image" id="portrait" alt="Character Portrait" src="/images/ui/PNGs/coltPortrait.png" />
+                <input type="image" id="attack" alt="Attack" src="/images/ui/PNGs/attack.png" />
+                <input type="image" id="ability" alt="Ability" src="/images/ui/PNGs/ability.png" disabled />
+                <input type="image" id="item" alt="Item" src="/images/ui/PNGs/item.png" disabled />
+                <input type="image" id="escape" alt="Escape" src="/images/ui/PNGs/escape.png" />
+            </menu>
+            <menu id="text-box">
+                <h3>Choose your attack target.</h3>
+            </menu>
         </main>
         <footer></footer>
     </body>
