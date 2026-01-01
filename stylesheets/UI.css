@@ -1,0 +1,38 @@
+.bordered-frame {
+    border: 4px solid black;
+    margin: 0;
+    padding: 0;
+}
+
+#text-container-frame {
+    display: none;
+}
+
+#battle-menu, #text-container {
+    width: 1280px;
+    height: 144px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    /* border: 4px solid black; */
+}
+
+#battle-menu {
+    justify-content: space-evenly;
+}
+
+#text-container-button {
+    font-size: 1em;
+    height: 100%;
+    width: 20%;
+    margin-right: auto;
+}
+
+#text-box {
+    font-size: 2em;
+    flex: 1;    /* This is to account for the button in text box */
+    text-align: center;
+    margin: 0;
+}

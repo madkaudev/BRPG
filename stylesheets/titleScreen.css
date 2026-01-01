@@ -1,0 +1,75 @@
+#title-screen-container {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100dvw;
+    height: 100dvh;
+    background-color: white;
+    /* This is so I can center the logo and the buttons vertically */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#title-screen-flexbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 7.5dvw;
+}
+
+.title-screen-button {
+    position: relative;
+    z-index: 2;
+    font-size: 2dvw;
+    width: 15dvw;
+    height: 10dvh;
+}
+
+#credits-button {
+    margin: 0 auto;
+    margin-top: 5dvh;
+}
+
+#brpg-logo {
+    max-width: 50dvw;
+    max-height: 50dvh;
+    width: auto;
+    height: auto;
+    position: relative;
+    z-index: 1;
+    animation: 5s ease-in-out infinite alternate side-to-side;
+}
+
+@keyframes side-to-side {
+    from {
+        transform: rotate(-30deg);
+    }
+    to {
+        transform: rotate(30deg);
+    }
+}
+
+#credits-dialog, #settings-dialog {
+    padding: 2dvw;
+    height: 50vh;
+    width: 50vw;
+}
+#credits-dialog h1 {
+    font-size: 3rem;
+}
+#credits-dialog p, #settings-dialog label {
+    font-size: 2rem;
+}
+
+.dialog-button {
+    font-size: 1rem;
+    margin-bottom: 2dvh;
+}
+
+#credits-dialog > :nth-child(2) {
+    margin-top: 0;
+}

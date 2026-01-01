@@ -3,52 +3,135 @@
     <head>
         <!-- Set the title and favicon image  -->
         <title>BRPG</title>
-        <link rel="icon" href="images/logos/pngs/brpg_logo_2.png" type="image/x-icon"/>
+        <link rel="icon" href="./images/logos/pngs/brpg_logo_2.png" type="image/x-icon"/>
         <!-- Author and description -->
         <meta name="author" content="Mad Kau"/>
         <meta name="description" content="The Browser Role Playing Game. Lead your squad of heroes to defeat the evil Lord Natu Plantu!"/>
         <!-- Basic Metadata for Open Graph Protocol -->
         <meta property="og:title" content="BRPG"/>
         <meta property="og:type" content="website"/>
-        <meta property="og:url" content="https://www.BRPG.farawaygiant.com"/> <!-- Doesn't exist yet -->
-        <meta property="og:image" content="images/logos/pngs/brpg_logo_2.png"/>
+        <meta property="og:url" content="https://www.farawaygiant.com/projects/BRPG/index.html"/> <!-- Doesn't exist yet -->
+        <meta property="og:image" content="./images/logos/pngs/brpg_logo_2.png"/>
         <!-- Twitter/X cards -->
         <meta name="twitter:card" content="summary"/>
         <meta name="twitter:site" content="@farawaygiant"/>
         <meta name="twitter:title" content="BRPG"/>
         <meta name="twitter:description" content="The Browser Role Playing Game. Lead your squad of heroes to defeat the evil Lord Natu Plantu!"/>
-        <meta name="twitter:image" content="images/logos/pngs/brpg_logo_2.png"/>
+        <meta name="twitter:image" content="./images/logos/pngs/brpg_logo_2.png"/>
         <!-- Character set and viewport -->
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <!-- Load styles -->
-        <link rel="stylesheet" href="stylesheets/canvas.css"/>
-        <link rel="stylesheet" href="stylesheets/layout.css"/> 
+        <link rel="stylesheet" href="./stylesheets/base.css"/>
+        <link rel="stylesheet" href="./stylesheets/titleScreen.css"/>
+        <link rel="stylesheet" href="./stylesheets/UI.css"/> 
         <!-- Load scripts -->
-        <script type="module" src="scripts/battleScene.js" defer></script>
-        <script type="module" src="scripts/battleMenuInputs.js" defer></script>
-        <script src="scripts/layout.js" defer></script>
+        <script type="module" src="./scripts/main.js" defer></script>
+        <script src="./scripts/game/titleScreen.js" defer></script>
+        <!-- <script type="module" src="./scripts/assets/canvas.js" defer></script> -->
+        <!-- <script type="module" src="./scripts/assets/UI.js" defer></script> -->
     </head>
     <body>
         <header>
-            <!-- Coordinates of mouse -->
-            <h3 id="header-h3">Current Pixel: (0,0)</h3>
+            <div id="title-screen-container">
+                <div id="title-screen-flexbox">
+                    <button id="title-screen-start-button" class="title-screen-button">Start</button>
+                    <img id="brpg-logo" src="./images/logos/pngs/brpg_logo_2.png"/>
+                    <button id="settings-button" class="title-screen-button">Settings</button>
+                </div>
+                <!-- This button is outside the flexbox because it needs to be centered under the flexbox -->
+                <button id="credits-button" class="title-screen-button">Credits</button>
+            </div>
+            <!-- Dialog boxes for settings and credits -->
+            <dialog id="settings-dialog">
+                <button id="settings-dialog-button" class="dialog-button">X</button>
+                <!-- <div>
+                    <input type="range" id="text-speed-range" name="text-speed-range" min="1" max="5" value="3" step="1"/>
+                    <label for="text-speed-range">Text Speed</label>
+                </div> -->
+                <div>
+                    <input type="range" id="font-size-range" name="font-size-range" min="1" max="5" value="3" step="1"/>
+                    <label for="font-size-range">Text Size</label>
+                </div>
+                <form>
+                    <input type="checkbox" id="fullscreen-checkbox" name="fullscreen-checkbox" value="fullscreen"/>
+                    <label for="fullscreen-checkbox">Fullscreen</label>
+                </form>
+                <form>
+                    <input type="checkbox" id="dark-mode-checkbox" name="dark-mode-checkbox" value="dark-mode"/>
+                    <label for="dark-mode-checkbox">Dark Mode</label>
+                </form>
+                <!-- <div>
+                    <input type="range" id="master-volume-range" name="master-volume-range" min="0" max="100" value="100" step="1"/>
+                    <label for="master-volume-range">Master Volume</label>
+                </div> -->
+            </dialog>
+            <dialog id="credits-dialog">
+                <button id="credits-dialog-button" class="dialog-button">X</button>
+                <h1>Director:</h1>
+                <p>MadKau</p>
+                <h1>Executive Producer:</h1>
+                <p>MadKau</p>
+                <h1>Producers:</h1>
+                <p>MadKau</p>
+                <h1>Lead Script Writer:</h1>
+                <p>MadKau</p>
+                <h1>Script Writers:</h1>
+                <p>MadKau</p>
+                <h1>Lead Programmer:</h1>
+                <p>MadKau</p>
+                <h1>Programmers:</h1>
+                <p>MadKau</p>
+                <h1>Lead Artist:</h1>
+                <p>MadKau</p>
+                <h1>Lead Character Designer:</h1>
+                <p>MadKau</p>
+                <h1>Character Designers:</h1>
+                <p>MadKau</p>
+                <h1>Lead UI/UX Designer:</h1>
+                <p>MadKau</p>
+                <h1>UI/UX Designers:</h1>
+                <p>MadKau</p>
+                <h1>Lead Game Designer:</h1>
+                <p>MadKau</p>
+                <h1>Lead Tester:</h1>
+                <p>MadKau</p>
+                <h1>Testers:</h1>
+                <p>MadKau</p>
+                <h1>Special Thanks:</h1>
+                <p>MadKau</p>
+                <h1>Dedicated To:</h1>
+                <p>Anyone who ever took an interest in what I do. Thank you! You all inspire me everyday.</p>
+            </dialog>
         </header>
         <main>
-            <canvas id="battle-scene" height="1280" width="720">
-                Crazy battling going on right now!
-            </canvas>
-            <menu id="battle-menu">
-                <input type="image" id="portrait" alt="Character Portrait" src="/images/ui/PNGs/coltPortrait.png" />
-                <input type="image" id="attack" alt="Attack" src="/images/ui/PNGs/attack.png" />
-                <input type="image" id="ability" alt="Ability" src="/images/ui/PNGs/ability.png" disabled />
-                <input type="image" id="item" alt="Item" src="/images/ui/PNGs/item.png" disabled />
-                <input type="image" id="escape" alt="Escape" src="/images/ui/PNGs/escape.png" />
-            </menu>
-            <menu id="text-box">
-                <h3>Choose your attack target.</h3>
-            </menu>
+            <!-- <h3 id="header-h3">Current Pixel: (0, 0)</h3> -->
+            <div id="canvas-frame" class="bordered-frame">
+                <canvas id="battle-scene" width="1280" height="720">
+                    Crazy battling going on right now!
+                </canvas>
+            </div>
+            <div id="battle-menu-frame" class="bordered-frame">
+                <menu id="battle-menu">
+                    <!-- <input type="image" id="portrait" alt="Character Portrait" src="/images/ui/pngs/coltPortrait.png" /> -->
+                    <input type="image" id="attack" alt="Attack" src="./images/ui/pngs/attack.png" />
+                    <input type="image" id="ability" alt="Ability" src="./images/ui/pngs/ability.png" />
+                    <input type="image" id="item" alt="Item" src="./images/ui/pngs/item.png" />
+                    <input type="image" id="escape" alt="Escape" src="./images/ui/pngs/escape.png" />
+                </menu>
+            </div>
+            <div id="text-container-frame" class="bordered-frame">
+                <menu id="text-container">
+                    <button id="text-container-button">Go Back</button>
+                    <p id="text-box">Temp Text!</p>
+                </menu>
+            </div>
         </main>
-        <footer></footer>
+        <footer>
+            <dialog id="error-dialog">
+                <button id="error-dialog-button">X</button>
+                <p id="error-dialog-text">Temp Text!</p>
+            </dialog>
+        </footer>
     </body>
 </html>
