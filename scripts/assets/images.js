@@ -1,26 +1,26 @@
 // Create objects of paths to image source files
 const HeroImagePaths = {
-    "Colt": "../../images/sprites/heroes/pngs/colt.png",
-    "Derrick": "../../images/sprites/heroes/pngs/derrick.png",
-    "Grammy": "../../images/sprites/heroes/pngs/grammy.png",
-    "Pete": "../../images/sprites/heroes/pngs/pete.png",
-    "Rook": "../../images/sprites/heroes/pngs/rook.png",
-    "Sam": "../../images/sprites/heroes/pngs/sam.png"
+    "Colt": "./images/sprites/heroes/pngs/colt.png",
+    "Derrick": "./images/sprites/heroes/pngs/derrick.png",
+    "Grammy": "./images/sprites/heroes/pngs/grammy.png",
+    "Pete": "./images/sprites/heroes/pngs/pete.png",
+    "Rook": "./images/sprites/heroes/pngs/rook.png",
+    "Sam": "./images/sprites/heroes/pngs/sam.png"
 };
 const EnemyImagePaths = {
-    "Goober": "../../images/sprites/enemies/pngs/goober.png",
-    "MenacingMantis": "../../images/sprites/enemies/pngs/menacingMantis.png"
+    "Goober": "./images/sprites/enemies/pngs/goober.png",
+    "MenacingMantis": "./images/sprites/enemies/pngs/menacingMantis.png"
 };
 // Represents all image paths in use
 //const ImagePaths = {...HeroImagePaths, ...EnemyImagePaths};
 
 const PortraitImagePaths = {
-    "Colt": "../../images/ui/pngs/coltPortrait.png",
-    "Derrick": "../../images/ui/pngs/derrickPortrait.png",
-    "Grammy": "../../images/ui/pngs/grammyPortrait.png",
-    "Pete": "../../images/ui/pngs/petePortrait.png",
-    "Rook": "../../images/ui/pngs/rookPortrait.png",
-    "Sam": "../../images/ui/pngs/samPortrait.png"
+    "Colt": "./images/ui/pngs/coltPortrait.png",
+    "Derrick": "./images/ui/pngs/derrickPortrait.png",
+    "Grammy": "./images/ui/pngs/grammyPortrait.png",
+    "Pete": "./images/ui/pngs/petePortrait.png",
+    "Rook": "./images/ui/pngs/rookPortrait.png",
+    "Sam": "./images/ui/pngs/samPortrait.png"
 };
 
 // Create an object of character names mapped to image objects

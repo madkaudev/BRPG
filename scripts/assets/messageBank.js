@@ -41,7 +41,7 @@ export const VictoryMessages = [
     "You just killed all my friends...",
     "ENTER VICTORY MESSAGE HERE",
     "{PLACEHOLDER}",
-    "Duh nuh nuh nuh duh duh dunh duh duh...",
+    "Duh nuh nuh nuh duh duh dunh duh duhhhhh...",
     "Fatality.",
     "Suffering From Success.",
     "If You're Reading This It's Too Late... To lose.",
